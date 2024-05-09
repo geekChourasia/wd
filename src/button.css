@@ -1,0 +1,27 @@
+.button-container {
+    position: relative; /* Make the container positioned */
+    display: inline-block; /* Ensure container wraps around button */
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-container::before {
+    content: ''; /* Create the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.3); /* Opacity color */
+    z-index: -1; /* Place the pseudo-element behind the button */
+    border-radius: 5px; /* Match button's border radius */
+  }
+  
